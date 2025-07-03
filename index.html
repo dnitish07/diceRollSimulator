@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dice Roll Simulator</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dice Roll Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body> 
+    <button id="theme-toggle"  class="button-top">
+        <img src="https://img.icons8.com/ios-filled/50/000000/moon-symbol.png" alt="Dark Mode" id="dark-icon" class="image-dimension"/>
+    </button>
+  <h1 style="text-align: center;" class="head-data">Dice Roll Simulator</h1>
+  <div class="dice" id="dice">&#9860;</div>
+  <div class="container">
+    <div class="row">
+        <div class="col-12 col-md-4 mb-2">
+            <button id="roll-button" class="d-flex flex-row w-100 button-data">Roll Dice</button>
+        </div>
+        <div class="col-12 col-md-4 mb-2">
+            <button id="auto-roll-toggle" class="d-flex flex-row w-100 button-data bg-success">Start Auto-Roll</button>
+        </div>
+        <div class="col-12 col-md-4 mb-2">
+            <button id="clear-history" class="d-flex flex-row w-100 button-data bg-danger">Clear History</button>
+        </div>
+        </div>
+    </div>
+  </div>
+  
 
-    <body>
-        <h1>Dice Roll Simulator</h1>
-        <div class="dice" id="dice">&#9860</div>
-        <button id="roll-button">Roll Dice</button>
-        <ul id="roll-history">
-            
-        </ul>   
-        <script src="script.js"></script>
-    </body>
+  <ul id="roll-history"></ul>
+
+  <h2 style="text-align: center;">Stats</h2>
+  <div id="stats">
+    <ul>
+      <li>1: <span id="stat-1">0</span></li>
+      <li>2: <span id="stat-2">0</span></li>
+      <li>3: <span id="stat-3">0</span></li>
+      <li>4: <span id="stat-4">0</span></li>
+      <li>5: <span id="stat-5">0</span></li>
+      <li>6: <span id="stat-6">0</span></li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
